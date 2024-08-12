@@ -1,0 +1,100 @@
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    color: inherit;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER AND FOOTER */
+header, footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 98vw;
+    height: 6vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: rgba(175, 175, 175, 0.774);
+    
+}
+
+header {
+    justify-content: space-between;
+}
+
+header > ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+
+footer {
+    bottom: 0;
+    justify-content: space-evenly;
+}
+.social-link {
+    width: 4vh;
+}
+
+
+/* BANNER */
+.banner:nth-child(even){
+    background-color: rgb(206, 206, 206);
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+/* GREETING */
+
+.greeting{
+    justify-content: center;
+}
+
+.portrait, .headshot{
+    width: 50px;
+}
+
+
+/* PROJECTS */
+/* ASL */
+
+.asl-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: solid red;
+}
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 53%;
+    height: 100%;
+    border: solid green;
+}
+.project-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    border: solid purple;
+    flex: 1;
+}

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+    <script src="script.js" defer></script>
+
     <!-- roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +22,9 @@
         <a href="index.html"><span class="material-symbols-outlined logo">fingerprint</span></a>
 
         <ul id="header-links">
-            <li><a class="about-me" href="aboutme.html">About Me</a></li>
-            <li><a class="experience" href="#">Experience</a></li>
-            <li><a class="projects" href="#">Projects</a></li>
+            <li><a class="about-me-navlink" href="aboutme.html">About Me</a></li>
+            <li><a class="experience-navlink" href="#">Experience</a></li>
+            <li><a class="projects-navlink" href="#">Projects</a></li>
 
         </ul>
         <button class="contact-button"><a href="contact.html">Contact</a></button>
@@ -70,55 +72,49 @@
         </div>
 
 
-        <div class="projects">
-            <div class="asl banner">
-                <h2>Projects</h2>
-                <div class="asl-content">
-                    <button>LEFT</button>
-                    <div class="project-content">
-                        <img src="images/mediapipe.jpeg" alt="mediapipe">
-                        <ul class="project-text">
-                            <li><strong>Title:</strong> ASL </li>
-                            <li><strong>Date:</strong></li>
-                            <li><strong>Technology Used:</strong> Mediapipe, Tensorflow</li>
-                            <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                 Rerum nulla, 
-                                error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
-                                inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
-                                Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
-                                doloremque non saepe? Dolorum, deleniti explicabo!</li>
-                            <li><Strong>Github:</Strong>github.com/asbsdlfkjds</li>
-                        </ul>
-                    </div>
-                    <button>RIGHT</button>
-                </div>
-                
+        <div class="projects banner">
+            <h2>Projects</h2>
+            <div class="project-slide selected" id="asl">
+                <img src="images/mediapipe.jpeg" alt="mediapipe">
+                <ul class="project-text">
+                    <li><strong>Title:</strong> ASL </li>
+                    <li><strong>Date:</strong></li>
+                    <li><strong>Technology Used:</strong> Mediapipe, Tensorflow</li>
+                    <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Rerum nulla, 
+                        error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
+                        inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
+                        Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
+                        doloremque non saepe? Dolorum, deleniti explicabo!</li>
+                    <li><Strong>Github:</Strong>github.com/asbsdlfkjds</li>
+                </ul>
             </div>
+            <div class="project-slide hidden" id="glaucoma">
+                <img src="images/mediapipe.jpeg" alt="mediapipe">
+                <ul class="project-text">
+                    <li><strong>Title:</strong> Glaucoma </li>
+                    <li><strong>Date:</strong></li>
+                    <li><strong>Technology Used:</strong> Mediapipe, Tensorflow</li>
+                    <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
+                        inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
+                        Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
+                        doloremque non saepe? Dolorum, deleniti explicabo!</li>
+                    <li><Strong>Github:</Strong>github.com/asbsdlfkjds</li>
+                </ul>
+            </div>
+
+            
+
+            <!-- Populated with buttons by JS -->
+            <div class="selector-buttons"></div>
+
+
         </div>
 
-        <div class="projects">
-            <div class="asl banner">
-                <h2>Experience</h2>
-                <div class="asl-content">
-                    <button>LEFT</button>
-                    <div class="project-content">
-                        <img src="images/mediapipe.jpeg" alt="mediapipe">
-                        <ul class="project-text">
-                            <li><strong>Company:</strong> HCA Healthcare </li>
-                            <li><strong>Role:</strong> ITG Technology Analyst PRN</li>
-                            <li><strong>Dates:</strong> May 2023 - Current</li>
-                            <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
-                                inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
-                                Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
-                                doloremque non saepe? Dolorum, deleniti explicabo!</li>
-                        </ul>
-                    </div>
-                    <button>RIGHT</button>
-                </div>
-                
-            </div>
-        </div>
+
+
+        
 
     </div>
 

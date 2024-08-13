@@ -12,6 +12,10 @@ ul, li, a{
     font-family:Arial, Helvetica, sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 /* HEADER AND FOOTER */
 header, footer {
     position: fixed;
@@ -74,12 +78,16 @@ footer {
 /* PROJECTS */
 /* ASL */
 
-.asl-content {
+.projects {
+    margin-bottom: 100px;
+}
+
+.project-slide {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     border: solid red;
 }
 .project-content {
@@ -98,3 +106,30 @@ footer {
     border: solid purple;
     flex: 1;
 }
+
+.hidden {
+    display: none;
+    transition: 1s;
+}
+
+
+.selector-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.nav-button {
+    width: 15%;
+    height: 0;
+    padding-bottom: 15%;
+    margin: 10px;
+    color: lightgrey;
+    
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+
+

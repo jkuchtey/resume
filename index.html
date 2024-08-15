@@ -21,7 +21,7 @@
     <header>
         <a href="index.html"><span class="material-symbols-outlined logo">fingerprint</span></a>
 
-        <ul id="header-links">
+        <ul class="header-links">
             <li><a class="about-me-navlink" href="aboutme.html">About Me</a></li>
             <li><a class="experience-navlink" href="#">Experience</a></li>
             <li><a class="projects-navlink" href="#">Projects</a></li>
@@ -35,17 +35,109 @@
         <div class="greeting banner">
             <div class="greeting-text">
                 <h1><span class="flavor">Hello!</span> <br> My name is Jason.</h1>
-                <p>I'm an Oberlin College computer science graduate. Thanks for visiting my website!</p>
-                <a href="JKuchtey Resume 7:2:24.pdf" target="_blank"><button>Take a look at my resume.</button></a>
+                <p class="greeting-desc">I'm an Oberlin College computer science graduate. Thanks for visiting my website!</p>
+                <a class="greeting-resume" href="#">Take a look at my resume</a>
             </div>
             <img class="portrait" src="images/portrait.jpg" alt="pic of me">
+        </div>
+
+
+
+        <div class="projects banner">
+            <h2 class="banner-title">Projects</h2>
+            <div class="project-slide selected" id="asl">
+                <img src="images/mediapipe.jpeg" alt="mediapipe">
+                <div class="project-text">
+                    <div class="project-text-title">
+                        <h3 class="project-title-heading">ASL Classification Model</h3>
+                        <p class="project-title-dates">August 2024 - Current</p>
+                    </div>
+                    <ul class="project-text-desc" style="list-style-type: circle;">
+                        <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
+                        <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>    
+                    </ul>
+
+                    <a target="_blank" class="project-title-link" href="https://github.com/jkuchtey/asl
+                    ">Github Repo</a>
+                </div>
+            </div>
+            <div class="project-slide hidden" id="glaucoma">
+                <img src="images/glaucoma.jpg" alt="mediapipe">
+                <div class="project-text">
+                    <div class="project-text-title">
+                        <h3 class="project-title-heading">Glaucoma Fundus Early Diagnosis Recognition Model</h3>
+                        <p class="project-title-dates">January 2024 - May 2024</p>
+                    </div>
+                    <ul class="project-text-desc" style="list-style-type: circle;">
+                        <li>Created a convolutional neural network image recognition model with frameworks and libraires such as tensorflow, keras, pandas and numpy in order to visually diagnose early onset glaucoma</li>
+                        <li>Built multiple machine learning models and compared performance with various hyperparameter tuning to optimize model diagnosis accuracy</li>
+                    </ul>
+
+                    <a class="project-title-link" target="_blank" href="https://github.com/jkuchtey/glaucoma
+                    ">Github Repo</a>
+                </div>
+            </div>
+            <div class="project-slide hidden" id="stereo">
+                <img src="images/stereo.png" alt="tsukuba dataset example image">
+                <div class="project-text">
+                    <div class="project-text-title">
+                        <h3 class="project-title-heading">ASL Classification Model</h3>
+                        <p class="project-title-dates">August 2024 - Current</p>
+                    </div>
+                    <ul class="project-text-desc" style="list-style-type: circle;">
+                        <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
+                        <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>    
+                    </ul>
+
+                    <a class="project-title-link" href="https://github.com/jkuchtey/asl
+                    ">Github Repo</a>
+                </div>
+            </div>
+            <!-- Populated with buttons by JS -->
+            <div class="selector-buttons"></div>
+        </div>
+
+        <div class="expereince banner">
+            <h2 class="banner-title">Experience</h2>
+            <div class="exp-content">
+                <div class="education">
+                    <h3 class="exp-entry-title">Oberlin College</h3>
+                    <p>BA in Computer Science and Politics</p>
+                    <p>August 2020 - May 2024, Oberlin, OH</p>
+                </div>
+                <div class="hca">
+                    <h3 class="exp-entry-title">HCA Healthcare</h3>
+                    <p>Technical Analyst PRN</p>
+                    <p>May 2023 - Current, Nashville, TN</p>
+                    <ul>
+                        <li>Maintained and optimized facility technology for nurses and physicians</li>
+                        <li>Assisted with projects including installing and updating technology site wide.</li>
+                    </ul>
+                </div>
+                <div class="ryno">
+                    <h3 class="exp-entry-title">Lisa Ryno Biochemistry Lab</h3>
+                    <p>Bioinformatics Data Analyst</p>
+                    <p>January 2023 - May 2023, Oberlin, OH</p>
+                    <ul>
+                        <li> Independently created and deployed an RNA Sequencing 
+                            pipeline to find differential gene expression in the transcriptome</li>
+                        <li>Normalized and cleansed data for efficient and accurate analysis 
+                            with shell software packages such as DESEQ2, FastQC and Salmon</li>
+                        <li>Built analysis pipelines in R deploying packages such as Bioconductor</li>
+                        <li>Created documentation for future analysis and pipeline modification</li>
+                        <li>Results published in the Journal of Biological Chemistry</li>
+                        <li><a href="https://ryno-lab.com/research/influence-of-sugars-on-biofilm-and-the-transcriptome/">More Info</a></li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
 
         <div class="about-me banner">
             <div class="about-me-intro">
                 <img class="headshot" src="images/grad.JPG" alt="me graduating :D">
                 <div class="about-me-desc">
-                    <h1 id="abt-me-title">About Me</h1>
+                    <h2 class="banner-title">About Me</h2>
                     <p>I'm a 2024 Computer Science graduate from Oberlin College currently based in Nashville.
                         I have explored many different fields of computer science,
                         from bioinformatics to machine learning during my academic career.
@@ -70,53 +162,13 @@
                 </ul>
             </div>
         </div>
-
-
-        <div class="projects banner">
-            <h2>Projects</h2>
-            <div class="project-slide selected" id="asl">
-                <img src="images/mediapipe.jpeg" alt="mediapipe">
-                <ul class="project-text">
-                    <li><strong>Title:</strong> ASL </li>
-                    <li><strong>Date:</strong></li>
-                    <li><strong>Technology Used:</strong> Mediapipe, Tensorflow</li>
-                    <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Rerum nulla, 
-                        error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
-                        inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
-                        Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
-                        doloremque non saepe? Dolorum, deleniti explicabo!</li>
-                    <li><Strong>Github:</Strong>github.com/asbsdlfkjds</li>
-                </ul>
-            </div>
-            <div class="project-slide hidden" id="glaucoma">
-                <img src="images/mediapipe.jpeg" alt="mediapipe">
-                <ul class="project-text">
-                    <li><strong>Title:</strong> Glaucoma </li>
-                    <li><strong>Date:</strong></li>
-                    <li><strong>Technology Used:</strong> Mediapipe, Tensorflow</li>
-                    <li><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        error a eveniet sint dolores similique illo ratione deleniti, eos molestiae 
-                        inventore obcaecati animi id reiciendis quas aut, reprehenderit quos explicabo. 
-                        Ipsam dolore vel fugit? Natus tempore modi, placeat tempora libero velit eum similique 
-                        doloremque non saepe? Dolorum, deleniti explicabo!</li>
-                    <li><Strong>Github:</Strong>github.com/asbsdlfkjds</li>
-                </ul>
-            </div>
-
-            
-
-            <!-- Populated with buttons by JS -->
-            <div class="selector-buttons"></div>
-
-
-        </div>
-
-
-
-        
-
     </div>
+
+    <div class="contact banner">
+        <h2 class="banner-title">Get in Touch</h2>
+        
+    </div>
+
 
 
     <footer>

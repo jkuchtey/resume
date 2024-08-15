@@ -19,15 +19,13 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><span class="material-symbols-outlined logo">fingerprint</span></a>
-
+        <a  href="index.html"><img id="lilguy" src="images/lilguy.png" alt="just a lil guy"></a>
         <ul class="header-links">
-            <li><a class="about-me-navlink" href="aboutme.html">About Me</a></li>
+            <li><a class="about-me-navlink" href="#about-me">About Me</a></li>
             <li><a class="experience-navlink" href="#">Experience</a></li>
             <li><a class="projects-navlink" href="#">Projects</a></li>
-
+            <li><a class="contact-navlink" href="#">Contact</a></li>
         </ul>
-        <button class="contact-button"><a href="contact.html">Contact</a></button>
     </header>
 
     <div class="banners">
@@ -57,8 +55,8 @@
                         <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>    
                     </ul>
 
-                    <a target="_blank" class="project-title-link" href="https://github.com/jkuchtey/asl
-                    ">Github Repo</a>
+                    <a target="_blank" href="https://github.com/jkuchtey"><img class="social-link" src="images/githublogo.png" alt="githublogo"></a>
+
                 </div>
             </div>
             <div class="project-slide hidden" id="glaucoma">
@@ -104,69 +102,105 @@
                     <h3 class="exp-entry-title">Oberlin College</h3>
                     <p>BA in Computer Science and Politics</p>
                     <p>August 2020 - May 2024, Oberlin, OH</p>
+                    <div class="coursework">
+                        <h2>Coursework</h2>
+                        <ul>
+                            <li>CSCI 151 / Data Structures</li>
+                            <li>CSCI 210 / Computer Architecture</li>
+                            <li>CSCI 241 / Systems Programming</li>
+                            <li>CSCI 275 / Programming Abstractions</li>
+                            <li>CSCI 280 / Algorithms</li>
+                            <li>CSCI 317 / Human Computation</li>
+                            <li>CSCI 361 / Game Design</li>
+                            <li>CSCI 373 / Machine Learning</li>
+                            <li>CSCI 383 / Computation Theory</li>
+                            <li>STAT 113 / Intro to Statistics</li>
+                            <li>STAT 205 / Statistics and Modeling</li>
+                            <li>MATH 220 / Discrete Mathematics</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="hca">
-                    <h3 class="exp-entry-title">HCA Healthcare</h3>
-                    <p>Technical Analyst PRN</p>
-                    <p>May 2023 - Current, Nashville, TN</p>
-                    <ul>
-                        <li>Maintained and optimized facility technology for nurses and physicians</li>
-                        <li>Assisted with projects including installing and updating technology site wide.</li>
-                    </ul>
-                </div>
-                <div class="ryno">
-                    <h3 class="exp-entry-title">Lisa Ryno Biochemistry Lab</h3>
-                    <p>Bioinformatics Data Analyst</p>
-                    <p>January 2023 - May 2023, Oberlin, OH</p>
-                    <ul>
-                        <li> Independently created and deployed an RNA Sequencing 
-                            pipeline to find differential gene expression in the transcriptome</li>
-                        <li>Normalized and cleansed data for efficient and accurate analysis 
-                            with shell software packages such as DESEQ2, FastQC and Salmon</li>
-                        <li>Built analysis pipelines in R deploying packages such as Bioconductor</li>
-                        <li>Created documentation for future analysis and pipeline modification</li>
-                        <li>Results published in the Journal of Biological Chemistry</li>
-                        <li><a href="https://ryno-lab.com/research/influence-of-sugars-on-biofilm-and-the-transcriptome/">More Info</a></li>
-                    </ul>
-
+                <div class="jobs">
+                    <div class="hca">
+                        <h3 class="exp-entry-title">HCA Healthcare</h3>
+                        <p>Technical Analyst PRN</p>
+                        <p>May 2023 - Current, Nashville, TN</p>
+                        <ul>
+                            <li>Maintained and optimized facility technology for nurses and physicians</li>
+                            <li>Assisted with projects including installing and updating technology site wide.</li>
+                        </ul>
+                    </div>
+                    <div class="ryno">
+                        <h3 class="exp-entry-title">Lisa Ryno Biochemistry Lab</h3>
+                        <p>Bioinformatics Data Analyst</p>
+                        <p>January 2023 - May 2023, Oberlin, OH</p>
+                        <ul>
+                            <li> Independently created and deployed an RNA Sequencing
+                                pipeline to find differential gene expression in the transcriptome</li>
+                            <li>Normalized and cleansed data for efficient and accurate analysis
+                                with shell software packages such as DESEQ2, FastQC and Salmon</li>
+                            <li>Built analysis pipelines in R deploying packages such as Bioconductor</li>
+                            <li>Created documentation for future analysis and pipeline modification</li>
+                            <li>Results published in the Journal of Biological Chemistry</li>
+                            <li><a href="https://ryno-lab.com/research/influence-of-sugars-on-biofilm-and-the-transcriptome/">More Info</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="about-me banner">
-            <div class="about-me-intro">
-                <img class="headshot" src="images/grad.JPG" alt="me graduating :D">
-                <div class="about-me-desc">
-                    <h2 class="banner-title">About Me</h2>
-                    <p>I'm a 2024 Computer Science graduate from Oberlin College currently based in Nashville.
-                        I have explored many different fields of computer science,
-                        from bioinformatics to machine learning during my academic career.
-                    </p>
-                </div>
+        <div class="about-me banner" id="about-me">
+            <h2 class="banner-title">About Me</h2>
+            <div class="about-me-content">
+                <img class="headshot" src="images/grad.jpg" alt="meeee:D">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa corrupti laboriosam quae placeat ad suscipit, optio id nostrum adipisci iste! Perferendis similique repudiandae temporibus nulla sunt fugit at esse sapiente. Quam explicabo minus velit tenetur totam. Quas dolor, eaque, aliquid officiis, illo fugit saepe dolorem aspernatur ratione recusandae incidunt.</p>
             </div>
-            <div class="coursework">
-                <h2>Coursework</h2>
-                <ul>
-                    <li>CSCI 151 / Data Structures</li>
-                    <li>CSCI 210 / Computer Architecture</li>
-                    <li>CSCI 241 / Systems Programming</li>
-                    <li>CSCI 275 / Programming Abstractions</li>
-                    <li>CSCI 280 / Algorithms</li>
-                    <li>CSCI 317 / Human Computation</li>
-                    <li>CSCI 361 / Game Design</li>
-                    <li>CSCI 373 / Machine Learning</li>
-                    <li>CSCI 383 / Computation Theory</li>
-                    <li>STAT 113 / Intro to Statistics</li>
-                    <li>STAT 205 / Statistics and Modeling</li>
-                    <li>MATH 220 / Discrete Mathematics</li>
-                </ul>
-            </div>
+
         </div>
     </div>
 
-    <div class="contact banner">
-        <h2 class="banner-title">Get in Touch</h2>
-        
+    
+    <div class="banner contact-banner">
+        <div class="contact-banner-title">
+            <h1>Get in Contact</h1>
+            <p>Fill out this form to get in touch with me, or use one of these alternative contact methods.</p>
+        </div>
+        <div class="content">
+            <form class="msg-form">
+                <ul>
+                    <li>
+                        <label for="name">*Name:</label>
+                        <input type="text" id="name" name="user_name" class="input-field" required>
+                    </li>
+                    <li>
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name="user_email" class="input-field" required>
+                    </li>
+                    <li class="message-li">
+                        <label for="message">Message:</label>
+                        <textarea name="user_message" id="message" class="input-field"></textarea>
+                    </li>
+                    <li class="submit-button">
+                        <button type="submit">Send</button>
+                    </li>
+                </ul>
+            </form>
+            <div class="info">
+                <div class="info-row">
+                    <span class="material-symbols-outlined">mail</span>
+                    <p> jason.kuchtey@gmail.com</p>
+                </div>
+
+                <div class="info-row">
+                    <span class="material-symbols-outlined">phone</span>
+                    <p> (615) 732 9816</p>
+                </div>
+
+
+                
+            </div>
+        </div>
+
     </div>
 
 

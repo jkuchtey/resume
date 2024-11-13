@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="module" src="formhandling.js" defer></script>
 
     <script src="script.js" defer></script>
 
-    <!-- roboto -->
+    <!-- caveat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <!-- Fingerprint Logo -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -29,7 +30,6 @@
     </header>
 
     <div class="banners">
-
         <div class="greeting banner">
             <div class="greeting-text">
                 <h1><span class="flavor">Hello!</span> <br> My name is Jason.</h1>
@@ -39,127 +39,85 @@
             <img class="portrait" src="images/portrait.jpg" alt="pic of me">
         </div>
 
-
-
-        <div class="projects banner">
+        <div class="title-div">
             <h2 class="banner-title">Projects</h2>
-            <div class="project-slide selected" id="asl">
-                <img src="images/mediapipe.jpeg" alt="mediapipe">
-                <div class="project-text">
-                    <div class="project-text-title">
-                        <h3 class="project-title-heading">ASL Classification Model</h3>
-                        <p class="project-title-dates">August 2024 - Current</p>
+            <div class="projects-and-arrows">
+                <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow">
+                <div class="projects banner">
+                    <div class="project-slide selected" id="asl">
+                        <!-- <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow"> -->
+                        <img src="images/mediapipe.jpeg" alt="mediapipe">
+                        <div class="project-text">
+                            <div class="project-text-title">
+                                <h3 class="project-title-heading">ASL Classification Model</h3>
+                                <p class="project-title-dates">August 2024 - Current</p>
+                            </div>
+                            <ul class="project-text-desc" style="list-style-type: circle;">
+                                <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
+                                <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>
+                            </ul>
+                            <a target="_blank" href="#"><img class="social-link project-link" src="images/githublogo.png" alt="githublogo"></a>
+                        </div>
+                        <!-- <img class="nav-arrow right" src="images/rightarrow.png" alt="arrow"> -->
                     </div>
-                    <ul class="project-text-desc" style="list-style-type: circle;">
-                        <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
-                        <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>    
-                    </ul>
-
-                    <a target="_blank" href="https://github.com/jkuchtey"><img class="social-link" src="images/githublogo.png" alt="githublogo"></a>
-
+                    <div class="project-slide hidden" id="glaucoma">
+                        <!-- <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow"> -->
+                        <img src="images/glaucoma.jpg" alt="mediapipe">
+                        <div class="project-text">
+                            <div class="project-text-title">
+                                <h3 class="project-title-heading">Glaucoma Fundus Early Diagnosis Recognition Model</h3>
+                                <p class="project-title-dates">January 2024 - May 2024</p>
+                            </div>
+                            <ul class="project-text-desc" style="list-style-type: circle;">
+                                <li>Created a convolutional neural network image recognition model with frameworks and libraires such as tensorflow, keras, pandas and numpy in order to visually diagnose early onset glaucoma</li>
+                                <li>Built multiple machine learning models and compared performance with various hyperparameter tuning to optimize model diagnosis accuracy</li>
+                            </ul>
+                            <a target="_blank" href="#"><img class="social-link project-link" src="images/githublogo.png" alt="githublogo"></a>
+                        </div>
+                        <!-- <img class="nav-arrow right" src="images/rightarrow.png" alt="arrow"> -->
+                    </div>
+                    <div class="project-slide hidden" id="stereo">
+                        <!-- <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow"> -->
+                        <img src="images/stereo.png" alt="tsukuba dataset example image">
+                        <div class="project-text">
+                            <div class="project-text-title">
+                                <h3 class="project-title-heading">ASL Classification Model</h3>
+                                <p class="project-title-dates">August 2024 - Current</p>
+                            </div>
+                            <ul class="project-text-desc" style="list-style-type: circle;">
+                                <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
+                                <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>
+                            </ul>
+                            <a target="_blank" href="#"><img class="social-link project-link" src="images/githublogo.png" alt="githublogo"></a>
+                        </div>
+                        <!-- <img class="nav-arrow right" src="images/rightarrow.png" alt="arrow"> -->
+                    </div>
+                    <!-- Populated with buttons by JS -->
+                    <div class="selector-buttons"></div>
                 </div>
-            </div>
-            <div class="project-slide hidden" id="glaucoma">
-                <img src="images/glaucoma.jpg" alt="mediapipe">
-                <div class="project-text">
-                    <div class="project-text-title">
-                        <h3 class="project-title-heading">Glaucoma Fundus Early Diagnosis Recognition Model</h3>
-                        <p class="project-title-dates">January 2024 - May 2024</p>
-                    </div>
-                    <ul class="project-text-desc" style="list-style-type: circle;">
-                        <li>Created a convolutional neural network image recognition model with frameworks and libraires such as tensorflow, keras, pandas and numpy in order to visually diagnose early onset glaucoma</li>
-                        <li>Built multiple machine learning models and compared performance with various hyperparameter tuning to optimize model diagnosis accuracy</li>
-                    </ul>
-
-                    <a class="project-title-link" target="_blank" href="https://github.com/jkuchtey/glaucoma
-                    ">Github Repo</a>
-                </div>
-            </div>
-            <div class="project-slide hidden" id="stereo">
-                <img src="images/stereo.png" alt="tsukuba dataset example image">
-                <div class="project-text">
-                    <div class="project-text-title">
-                        <h3 class="project-title-heading">ASL Classification Model</h3>
-                        <p class="project-title-dates">August 2024 - Current</p>
-                    </div>
-                    <ul class="project-text-desc" style="list-style-type: circle;">
-                        <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
-                        <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>    
-                    </ul>
-
-                    <a class="project-title-link" href="https://github.com/jkuchtey/asl
-                    ">Github Repo</a>
-                </div>
-            </div>
-            <!-- Populated with buttons by JS -->
-            <div class="selector-buttons"></div>
-        </div>
-
-        <div class="expereince banner">
-            <h2 class="banner-title">Experience</h2>
-            <div class="exp-content">
-                <div class="education">
-                    <h3 class="exp-entry-title">Oberlin College</h3>
-                    <p>BA in Computer Science and Politics</p>
-                    <p>August 2020 - May 2024, Oberlin, OH</p>
-                    <div class="coursework">
-                        <h2>Coursework</h2>
-                        <ul>
-                            <li>CSCI 151 / Data Structures</li>
-                            <li>CSCI 210 / Computer Architecture</li>
-                            <li>CSCI 241 / Systems Programming</li>
-                            <li>CSCI 275 / Programming Abstractions</li>
-                            <li>CSCI 280 / Algorithms</li>
-                            <li>CSCI 317 / Human Computation</li>
-                            <li>CSCI 361 / Game Design</li>
-                            <li>CSCI 373 / Machine Learning</li>
-                            <li>CSCI 383 / Computation Theory</li>
-                            <li>STAT 113 / Intro to Statistics</li>
-                            <li>STAT 205 / Statistics and Modeling</li>
-                            <li>MATH 220 / Discrete Mathematics</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="jobs">
-                    <div class="hca">
-                        <h3 class="exp-entry-title">HCA Healthcare</h3>
-                        <p>Technical Analyst PRN</p>
-                        <p>May 2023 - Current, Nashville, TN</p>
-                        <ul>
-                            <li>Maintained and optimized facility technology for nurses and physicians</li>
-                            <li>Assisted with projects including installing and updating technology site wide.</li>
-                        </ul>
-                    </div>
-                    <div class="ryno">
-                        <h3 class="exp-entry-title">Lisa Ryno Biochemistry Lab</h3>
-                        <p>Bioinformatics Data Analyst</p>
-                        <p>January 2023 - May 2023, Oberlin, OH</p>
-                        <ul>
-                            <li> Independently created and deployed an RNA Sequencing
-                                pipeline to find differential gene expression in the transcriptome</li>
-                            <li>Normalized and cleansed data for efficient and accurate analysis
-                                with shell software packages such as DESEQ2, FastQC and Salmon</li>
-                            <li>Built analysis pipelines in R deploying packages such as Bioconductor</li>
-                            <li>Created documentation for future analysis and pipeline modification</li>
-                            <li>Results published in the Journal of Biological Chemistry</li>
-                            <li><a href="https://ryno-lab.com/research/influence-of-sugars-on-biofilm-and-the-transcriptome/">More Info</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <img class="nav-arrow right" src="images/rightarrow.png" alt="arrow">
             </div>
         </div>
 
-        <div class="about-me banner" id="about-me">
-            <h2 class="banner-title">About Me</h2>
-            <div class="about-me-content">
+
+        <div class="center">
+            <div class="about-me banner" id="about-me">
                 <img class="headshot" src="images/grad.jpg" alt="meeee:D">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa corrupti laboriosam quae placeat ad suscipit, optio id nostrum adipisci iste! Perferendis similique repudiandae temporibus nulla sunt fugit at esse sapiente. Quam explicabo minus velit tenetur totam. Quas dolor, eaque, aliquid officiis, illo fugit saepe dolorem aspernatur ratione recusandae incidunt.</p>
-            </div>
+                <div class="about-me-content">
+                    <h2 class="banner-title">About Me</h2>
 
+                    <p>
+                        Hi, I'm Jason Kuchtey, a recent graduate of Oberlin College with a BA in Computer Science and Politics. My passion lies in developing innovative solutions through machine learning and data analysis. <br><br>
+                        I have experience creating models for medical diagnostics and ASL sign interpretation, and I've contributed to bioinformatics research, including an RNA sequencing project published in the Journal of Biological Chemistry. <br><br>
+                        I enjoy building optimized, scalable models using tools like TensorFlow, Keras, and OpenCV, and I’m continually exploring ways to leverage technology for impactful applications. Connect with me on LinkedIn or check out my GitHub for more on my projects!
+                    </p>
+                    <button>get in touch</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+<!--     
     <div class="banner contact-banner">
         <div class="contact-banner-title">
             <h1>Get in Contact</h1>
@@ -201,8 +159,28 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="https://formsubmit.co/jason.kuchtey@gmail.com" method="post">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+        
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+        
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+    </div>
 
 
     <footer>

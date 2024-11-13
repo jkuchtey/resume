@@ -1,10 +1,19 @@
+
 let slides = document.querySelectorAll(".project-slide")
+let allSlides = document.querySelector(".projects")
 slides.forEach(slide => {
     slide.style.transition = "1s"
 })
+// Append slide label to each slide
+
+
 let projects = document.querySelector(".selector-buttons")
 
+// Create slide nav buttons and associate them with their corresponding slide in a slideObject object.
+// slides are added to an array
+slideObjects = []
 for(let i = 0; i < slides.length; i++){
+
     navButton = document.createElement("button")
     navButton.classList.add("nav-button")
 
@@ -12,36 +21,60 @@ for(let i = 0; i < slides.length; i++){
 
     navButton.id = "select_" + slides[i].id
     projects.appendChild(navButton)
+
+    const currentSlide = {
+        slide: slides[i], 
+        button: navButton, 
+        idx: i,
+    }
+    slideObjects.push(currentSlide)
 }
 
+slideObjects[0].button.classList.add("selected-nav-button")
 
 
-let navButtons = document.querySelectorAll(".nav-button")
-navButtons[0].style.color = "grey"
-navButtons[0].style.backgroundColor = "grey"
-prevButton = navButtons[0]
-navButtons.forEach(navButton => {
-    navButton.onclick = () => {
-        // Get the corresponding button's slide's ID
-        slideId = navButton.id.replace("select_", "")
-        currSlide = document.querySelector("#" + slideId)
-        // Toggle to selected
 
-        prevButton.style = "background-color: lightgrey; color: lightgrey"
-        prevButton.style.transition = '0.5s'
-        navButton.style = "background-color: grey; color: grey"
-        navButton.style.transition = '0.5s'
+function selectSlide(target) {
+    let prev = slideObjects.find(o => !o.slide.classList.contains("hidden"))
+    target.button.classList.add("selected-nav-button")
+    target.slide.classList.remove("hidden")
 
-        
-        if(currSlide.classList.contains("hidden")){
-            currSlide.classList.remove("hidden")
-            let prevSelected = document.querySelector(".selected")
-            prevSelected.classList.remove("selected")
-            prevSelected.classList.add("hidden")
-            currSlide.classList.add("selected")
+    prev.button.classList.remove("selected-nav-button")
+    prev.slide.classList.add("hidden")
+}
+
+slideObjects.forEach(slideObject => {
+    slideObject.button.onclick = () => {
+        selectSlide(slideObject)
+    }
+})
+
+let navArrows = document.querySelectorAll(".nav-arrow")
+navArrows.forEach(arrow => {
+    arrow.onclick = () => {
+        let curr = slideObjects.find(o => !o.slide.classList.contains("hidden"))
+        if(arrow.classList.contains("left")){
+            targetIdx = curr.idx - 1
+            if (targetIdx < 0) targetIdx = slideObjects.length-1
         }
-        prevButton = navButton
-        
+        else {
+            targetIdx = curr.idx + 1
+            if (targetIdx > slideObjects.length-1) targetIdx = 0
+
+        }
+        target = slideObjects[targetIdx]
+        selectSlide(target)
         
     }
-});
+})
+
+
+
+
+
+
+
+
+
+
+

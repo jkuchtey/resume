@@ -44,9 +44,8 @@ header, footer {
     flex-direction: row;
     align-items: center;
     height: 6vh;
-    width: 99%;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    width: 100%;
+
     background-color: var(--hf); 
 }
 

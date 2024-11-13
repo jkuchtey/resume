@@ -70,11 +70,14 @@ navArrows.forEach(arrow => {
 
 
 
-
-
-
-
-
-
-
+const hamburger = document.querySelector(".hamburger")
+hamburger.onclick = () => {
+    const headerlinks = document.querySelector(".header-links")
+    if(headerlinks.style.display == "flex"){
+        headerlinks.style.display = "none"
+    }
+    else{
+        headerlinks.style.display = "flex"
+    }
+}
 

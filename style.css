@@ -1,11 +1,22 @@
+:root {
+    --background: #F5F5DC;
+    --hf: #d4d4be;
+    --primary: #333333;
+    --accent: #E07A5F;
+    --icons: #ab6d5c;
+    --button-text: white;
+
+
+}
+
 ul, li, a{
     text-decoration: none;
-
     color: inherit;
 }
 
 body {
-    background-color: white; 
+    background-color: var(--background); 
+    display: grid;
 
 }
 img {
@@ -19,6 +30,7 @@ img {
     font-family: "Roboto", sans-serif;
     /* font-weight: 400; */
     font-style: normal;
+    color: var(--primary);
 }
 
 button:hover {
@@ -32,41 +44,44 @@ header, footer {
     flex-direction: row;
     align-items: center;
     height: 6vh;
-    width: 98vw;
+    width: 99%;
     padding-left: 1vw;
     padding-right: 1vw;
-    background-color: lightgrey; 
+    background-color: var(--hf); 
 }
 
 header {
     display: flex;
     justify-content: space-between;
-
-    
+    position: fixed;
+  
 }
 
 header > ul{
     display: flex;
     justify-content: space-evenly;
-    width: 30%;
+    width: max-content;
 }
 .header-links {
     list-style-type: none;
-    width: 30%;
+    width: fit-content;
     right: 0;
+    align-items: center;
 
 }
 .header-links > li {
     transition: .2s ease;
+    padding: 5px;
+    gap: 5px;
+    margin-right: 10px;
 }
 .header-links > li:hover {
     color: white;
 }
 #lilguy {
-    height: 5vh;
+    height: 40px;
     box-shadow: none;
     transition: 0.2s ease;
-
 }
 #lilguy:hover{
     filter: invert(60%);
@@ -85,25 +100,31 @@ footer {
 }
 
 /* ALL BANNERS */
-.banner:nth-child(even){
-    background-color: white;
-}
+
 
 .banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 10px;
     padding-left: 2vw;
     padding-right: 2vw;
     padding-bottom: 50px;
-    background-color: white;
-
-
+    background-color: inherit;
+    width: fit-content;
+}
+.banners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .banner-title {
     margin: 30px;
+    margin-top: 50px;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -111,34 +132,45 @@ footer {
     font-size: 70px;
 }
 
-/* RESPONSIVENESS */
-@media only screen and (max-width: 600px) {
-    .portrait {
-        display: none;
-    }
-    .greeting-text {
-        width: 80vw;
-    }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 60%;
+    margin-right: 10px;
 
-    .project-slide > img {
-        display: none;
-    }
-
-    .header-links {
-        display: none;
-    }
 }
+.hamburger > div {
+    width: inherit;
+    height: 12%;
+    background-color: rgb(73, 73, 73);
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* GREETING */
 
 .greeting{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100vh;
+    margin: 50px 40px;
 }
 .flavor {
-    color: grey;
+    color: var(--accent);
 }
 .greeting-text {
     display: flex;
@@ -148,20 +180,23 @@ footer {
     height: 40%;
     font-size: 30px;
     font-weight: 700;
+    color: var(--primary);
 }
 .greeting-desc {
     font-weight: 400;
-    font-size: 15px;
-    padding: 10px;
+    font-size: 20px;
+    margin: 15px 0px;
 }
 .greeting-resume {
     font-weight: 400;
     font-size: 20px;
-    background-color:grey;
+    background-color: var(--accent);
     width:fit-content;
+    text-align: center;
     padding: 7px 14px;
     border-radius: 10px;
     transition: 0.2s ease;
+    color: var(--button-text);
 
 }
 .greeting-resume:hover{
@@ -170,7 +205,7 @@ footer {
 }
 
 .portrait, .headshot{
-    width: 25%;
+    width: 50%;
     height: auto;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.238);
 }
@@ -321,26 +356,33 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .headshot {
-    flex: 1;
-
+    width: 90%;
 }
 
 .about-me {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 100%;
     margin: 100px 0px;
 }
+.imgcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
 .about-me-content {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50px;
+    width: 50%;
 }
 
 .about-me-content > * {
@@ -350,7 +392,6 @@ footer {
 .about-me-content > p {
     padding-bottom: 20px;
     padding-top: 20px;
-    width: 50%;
 }
 
 
@@ -363,26 +404,26 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 95%;
     }
 
     .contact-form {
       width: 100%;
       max-width: 500px;
       padding: 20px;
-      background: #fff;
       /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
       border-radius: 8px;
       margin-bottom: 100px;
     }
     .contact-form h2 {
       margin-bottom: 20px;
-      color: #333;
+      color: var(--accent);
     }
     .contact-form label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
-      color: #555;
+      color: var(--primary);
     }
     .contact-form input[type="text"],
     .contact-form input[type="email"],
@@ -393,17 +434,56 @@ footer {
       border: 1px solid #ddd;
       border-radius: 4px;
       box-sizing: border-box;
+      background-color: var(--hf);
     }
     .contact-form button {
       padding: 10px 20px;
-      background-color: grey;
+      background-color: var(--accent);
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
     }
     .contact-form button:hover {
-      background-color: #218838;
+      background-color: var(--icons);
     }
 /* CAVEAT FONT */
 
+
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 400px) {
+    .portrait {
+        display: none;
+    }
+    .greeting-text {
+        width: 80vw;
+    }
+
+    .project-slide > img {
+        display: none;
+    }
+
+    .header-links {
+        display: none;
+        width: 90%;
+        height: 100%;
+        transition: all 1s ease;
+    }
+    .header-links:hover{
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .imgcontainer {
+        flex: 0;
+    }
+    .about-me-content {
+        width: 90%;
+    }
+
+
+}

@@ -3,7 +3,6 @@
 <head>
 
     <script src="script.js" defer></script>
-    <script src="success.js" defer></script>
 
     <!-- caveat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +22,18 @@
         <a  href="index.html"><img id="lilguy" src="images/lilguy.png" alt="just a lil guy"></a>
         <ul class="header-links">
             <li><a class="about-me-navlink" href="#about-me">About Me</a></li>
-            <li><a class="experience-navlink" href="#">Experience</a></li>
-            <li><a class="projects-navlink" href="#">Projects</a></li>
-            <li><a class="contact-navlink" href="#">Contact</a></li>
+            <li><a class="projects-navlink" href="#projects">Projects</a></li>
+            <li><a class="contact-navlink" href="#contact-form">Contact</a></li>
         </ul>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+
     </header>
 
     <div class="banners">
@@ -36,15 +43,16 @@
                 <p class="greeting-desc">I'm an Oberlin College computer science graduate. Thanks for visiting my website!</p>
                 <a class="greeting-resume" href="#">Take a look at my resume</a>
             </div>
-            <img class="portrait" src="images/portrait.jpg" alt="pic of me">
+            <div class="imgcontainer"><img class="portrait" src="images/portrait.jpg" alt="pic of me"></div>
         </div>
+
 
         <div class="title-div">
             <h2 class="banner-title">Projects</h2>
-            <div class="projects-and-arrows">
+            <div class="projects-and-arrows" id="projects">
                 <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow">
                 <div class="projects banner">
-                    <div class="project-slide selected" id="asl">
+                    <div class="project-slide" id="asl">
                         <!-- <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow"> -->
                         <img src="images/mediapipe.jpeg" alt="mediapipe">
                         <div class="project-text">
@@ -102,7 +110,7 @@
 
         <div class="center">
             <div class="about-me banner" id="about-me">
-                <img class="headshot" src="images/grad.jpg" alt="meeee:D">
+                <div class="imgcontainer"><img class="headshot" src="images/grad.jpg" alt="meeee:D"></div>
                 <div class="about-me-content">
                     <h2 class="banner-title">About Me</h2>
 
@@ -111,7 +119,7 @@
                         I have experience creating models for medical diagnostics and ASL sign interpretation, and I've contributed to bioinformatics research, including an RNA sequencing project published in the Journal of Biological Chemistry. <br><br>
                         I enjoy building optimized, scalable models using tools like TensorFlow, Keras, and OpenCV, and I’m continually exploring ways to leverage technology for impactful applications. Connect with me on LinkedIn or check out my GitHub for more on my projects!
                     </p>
-                    <button>get in touch</button>
+                    <button class="greeting-resume">get in touch</button>
                 </div>
             </div>
         </div>
@@ -162,9 +170,8 @@
     </div> -->
 
     <div class="contact-container">
-        <div class="contact-form">
+        <div class="contact-form" id="contact">
             <h2>Get in Touch</h2>
-            <p id="success_msg">Success! Message has been sent. I'll get in touch shortly!</p>
             <form action="https://formsubmit.co/58af7013c62eedf598a809b375460f1d" method="POST">
                 <!-- success page -->
                 <input type="hidden" name="_next" value="https://jkuchtey.github.io/resume/success.html">
@@ -187,6 +194,7 @@
             
                 <button type="submit">Send Message</button>
             </form>
+            <p id="success_msg">Thanks for the message! I'll get back to you as soon as I can.</p>
           </div>
     </div>
 

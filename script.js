@@ -83,6 +83,7 @@ hamburger.onclick = () => {
 
 const submitform = document.querySelector(".submit-contact");
 submitform.onclick = () => {
+    console.log("fart");
     const contacttitle = document.querySelector(".contact-form-title");
     const successmsg = document.createElement("h3");
     successmsg.appendChild(document.createTextNode("Message recieved, I'll get back to you as soon as possible!"));

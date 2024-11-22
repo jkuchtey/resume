@@ -70,14 +70,23 @@ navArrows.forEach(arrow => {
 
 
 
-const hamburger = document.querySelector(".hamburger")
+const hamburger = document.querySelector(".hamburger");
 hamburger.onclick = () => {
-    const headerlinks = document.querySelector(".header-links")
+    const headerlinks = document.querySelector(".header-links");
     if(headerlinks.style.display == "flex"){
-        headerlinks.style.display = "none"
+        headerlinks.style.display = "none";
     }
     else{
-        headerlinks.style.display = "flex"
+        headerlinks.style.display = "flex";
     }
-}
+};
 
+const submitform = document.querySelector(".submit-contact");
+submitform.onclick = () => {
+    const contacttitle = document.querySelector(".contact-form-title");
+    const successmsg = document.createElement("h3");
+    successmsg.appendChild(document.createTextNode("Message recieved, I'll get back to you as soon as possible!"));
+    contacttitle.insertAdjacentElement(successmsg);
+    successmsg.scrollIntoView();
+
+};

@@ -89,16 +89,29 @@
                         <img src="images/stereo.png" alt="tsukuba dataset example image">
                         <div class="project-text">
                             <div class="project-text-title">
-                                <h3 class="project-title-heading">ASL Classification Model</h3>
-                                <p class="project-title-dates">August 2024 - Current</p>
+                                <h3 class="project-title-heading">Stereo Reconstruction Model</h3>
+                                <p class="project-title-dates">August 2022 - December 2022</p>
                             </div>
                             <ul class="project-text-desc" style="list-style-type: circle;">
-                                <li>Created a convolutional neural network using the tensorflow and keras libraries to classify ASL alphabet hand signs.</li>
-                                <li> Used model to categorize live video hand signs with libraries such as mediapipe and OpenCV.</li>
+                                <li>Created an image segmentation model used to create a depth map of inputted matching stereo image pairs using a pixel similarity matching algorithm and multiple-view geometry calculations.</li>
                             </ul>
                             <a target="_blank" href="#"><img class="social-link project-link" src="images/githublogo.png" alt="githublogo"></a>
                         </div>
-                        <!-- <img class="nav-arrow right" src="images/rightarrow.png" alt="arrow"> -->
+                    </div>
+                    <div class="project-slide hidden" id="stereo">
+                        <!-- <img class="nav-arrow left" src="images/leftarrow.png" alt="arrow"> -->
+                        <img src="images/supreme.jpg" alt="supreme court">
+                        <div class="project-text">
+                            <div class="project-text-title">
+                                <h3 class="project-title-heading">Supreme Court Database Research Project</h3>
+                                <p class="project-title-dates">November 2022 - December 2022</p>
+                            </div>
+                            <ul class="project-text-desc" style="list-style-type: circle;">
+                                <li>Researched and designed a study on the ‘freshman effect’ in Supreme Court Justices</li>
+                                <li>Created multiple linear models using R with packages such as lubridate, dplyr, and ggplot2 to optimize model predictive performance</li>
+                            </ul>
+                            <a target="_blank" href="#"><img class="social-link project-link" src="images/githublogo.png" alt="githublogo"></a>
+                        </div>
                     </div>
                     <!-- Populated with buttons by JS -->
                     <div class="selector-buttons"></div>
@@ -170,11 +183,11 @@
     </div> -->
 
     <div class="contact-container">
+        <h2 class="contact-form-title">Get in Touch!</h2>
         <div class="contact-form" id="contact">
-            <h2>Get in Touch</h2>
             <form action="https://formsubmit.co/58af7013c62eedf598a809b375460f1d" method="POST">
                 <!-- success page -->
-                <input type="hidden" name="_next" value="https://jkuchtey.github.io/resume/success.html">
+                <input type="hidden" name="_next" value="https://jkuchtey.github.io/resume/index.html">
                 <!-- honeypot -->
                 <input type="text" name="_honey" style="display: none;">
                 <!-- disable captcha -->
@@ -192,7 +205,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             
-                <button type="submit">Send Message</button>
+                <button class="submit-contact" type="submit">Send Message</button>
             </form>
           </div>
     </div>

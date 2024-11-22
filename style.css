@@ -16,7 +16,7 @@ ul, li, a{
 
 body {
     background-color: var(--background); 
-    display: grid;
+    align-items: center;
 
 }
 img {
@@ -112,14 +112,14 @@ footer {
     padding-right: 2vw;
     padding-bottom: 50px;
     background-color: inherit;
-    width: fit-content;
+
+    width: 80%;
 }
 .banners {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 98vw;
 }
 
 .banner-title {
@@ -165,21 +165,22 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
     height: 100vh;
-    margin: 50px 40px;
 }
 .flavor {
     color: var(--accent);
 }
 .greeting-text {
     display: flex;
+    flex: 2;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    height: 40%;
     font-size: 30px;
     font-weight: 700;
     color: var(--primary);
+    gap: 12px;
 }
 .greeting-desc {
     font-weight: 400;
@@ -204,8 +205,8 @@ footer {
 }
 
 .portrait, .headshot{
-    width: 50%;
-    height: auto;
+    height: 100%;
+    width: 100%;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.238);
 }
 
@@ -222,12 +223,14 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 90%;
 }
 
 .projects {
     margin-bottom: 30px;
     padding: 20px;
     flex: 3;
+    width: 90%;
 }
 .title-div {
     display: flex;
@@ -255,14 +258,16 @@ footer {
     font-size: 12px;
     width: 100%;
     height: auto;
-    margin-left: 15px;
+    list-style-position: inside;
+
 }
 
 
 
 .project-text > ul > li {
     list-style: square;
-    padding: 10px 0px;
+    list-style-position: inside;
+
 }
 
 .project-text-title {
@@ -287,8 +292,13 @@ footer {
 }
 
 .project-text-desc {
-    height: 80%;
     padding-bottom: 4%;
+    background-color: var(--hf);
+    border-radius: 5px;
+    padding: 3%;    
+    width: 80%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -299,6 +309,8 @@ footer {
 }
 .project-link {
     transition: .2s ease;
+    /* TODO: Redo positioning of project links */
+    display: none;
 }
 .project-link:hover{
     width: 4.3vh;
@@ -372,7 +384,10 @@ footer {
 }
 
 .headshot {
-    width: 90%;
+    width: 60%;
+    height: auto;
+
+
 }
 
 .about-me {
@@ -382,11 +397,17 @@ footer {
     margin: 100px 0px;
 }
 .imgcontainer {
+    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+
+
+
 }
 
 .about-me-content {
@@ -417,7 +438,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 95%;
 }
 
 .contact-form {
@@ -428,9 +448,11 @@ footer {
     border-radius: 8px;
     margin-bottom: 100px;
 }
-.contact-form h2 {
+.contact-form-title{
     margin-bottom: 20px;
     color: var(--accent);
+    font-family: "Caveat", cursive;
+    font-size: 70px;
 }
 .contact-form label {
     display: block;
@@ -472,6 +494,7 @@ footer {
     .portrait {
         display: none;
     }
+
     .greeting-text {
         width: 80vw;
     }
@@ -485,6 +508,7 @@ footer {
         width: 90%;
         height: 100%;
         transition: all 1s ease;
+        font-size: small;
     }
 
     .hamburger {

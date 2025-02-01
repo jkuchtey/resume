@@ -386,7 +386,12 @@ footer {
 .headshot {
     width: 60%;
     height: auto;
+}
 
+.headshot:hover {
+    transform: translate(10px, 10px); 
+    transition: 1s ease;
+    overflow: visible;
 
 }
 

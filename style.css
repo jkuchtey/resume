@@ -388,12 +388,12 @@ footer {
     height: auto;
 }
 
-.headshot:hover {
+/* .headshot:hover {
     transform: translate(10px, 10px); 
     transition: 1s ease;
     overflow: visible;
 
-}
+} */
 
 .about-me {
     display: flex;
